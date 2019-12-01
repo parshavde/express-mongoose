@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "62a929bf-161a-4b47-9d30-1566eaa74e62",
+		"name": "Practical Task",
+		"description": "Practical Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"parshavshah1995@gmail.com\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"Parshav\",\n    \"last_name\": \"Shah\",\n    \"email\": \"parshavshah1991@gmail.com\",\n    \"password\": \"123456\",\n    \"mobile\": \"123123123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						},
+						"description": "Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"parshavshah1995@gmail.com\",\n    \"code\": \"5623\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/verify",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"verify"
+							]
+						},
+						"description": "Verify"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkZTI5N2VhNzcyM2M4MDg1NGNhZjMxMCIsImZpcnN0X25hbWUiOiJQYXJzaGF2IiwibGFzdF9uYW1lIjoiU2hhaCIsImVtYWlsIjoicGFyc2hhdnNoYWgxOTk1QGdtYWlsLmNvbSIsIm1vYmlsZSI6IjExMTExMTExMTEiLCJyb2xlIjoiQWRtaW4iLCJuYW1lIjoiUGFyc2hhdiBTaGFoIn0sImlhdCI6MTU3NTE3Njc2OSwiZXhwIjoxNTc1MjEyNzY5fQ.0cWGEUVKHPttarUggPhOEPnLidU8KdVFQ3QFlNpC_Uo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role\": \"Manager\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/user/role/update/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"role",
+								"update",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5de3448143943e0ac2c0888e"
+								}
+							]
+						},
+						"description": "Update Role"
+					},
+					"response": []
+				}
+			],
+			"description": "User"
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkZTM0NDgxNDM5NDNlMGFjMmMwODg4ZSIsImZpcnN0X25hbWUiOiJQYXJzaGF2IiwibGFzdF9uYW1lIjoiU2hhaCIsImVtYWlsIjoicGFyc2hhdnNoYWgxOTkxQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjEyMzEyMzEyMyIsInJvbGUiOiJVc2VyIiwibmFtZSI6IlBhcnNoYXYgU2hhaCJ9LCJpYXQiOjE1NzUxNzUzNDEsImV4cCI6MTU3NTIxMTM0MX0.PNVEnEA9w_9BGQi8QV9E0XXMTBW2MBo4_7nGLwjeYzg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\" : \"task 1\",\n\t\"description\" : \"test task\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/task/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"create"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						},
+						"description": "create"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkZTM0NDgxNDM5NDNlMGFjMmMwODg4ZSIsImZpcnN0X25hbWUiOiJQYXJzaGF2IiwibGFzdF9uYW1lIjoiU2hhaCIsImVtYWlsIjoicGFyc2hhdnNoYWgxOTkxQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjEyMzEyMzEyMyIsInJvbGUiOiJVc2VyIiwibmFtZSI6IlBhcnNoYXYgU2hhaCJ9LCJpYXQiOjE1NzUxNzUzNDEsImV4cCI6MTU3NTIxMTM0MX0.PNVEnEA9w_9BGQi8QV9E0XXMTBW2MBo4_7nGLwjeYzg",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\" : \"task 1\",\n\t\"description\" : \"test task 3\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/task/update/5de33d753993ed0a75681da9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"update",
+								"5de33d753993ed0a75681da9"
+							]
+						},
+						"description": "create"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjVkZTM0NDgxNDM5NDNlMGFjMmMwODg4ZSIsImZpcnN0X25hbWUiOiJQYXJzaGF2IiwibGFzdF9uYW1lIjoiU2hhaCIsImVtYWlsIjoicGFyc2hhdnNoYWgxOTkxQGdtYWlsLmNvbSIsIm1vYmlsZSI6IjEyMzEyMzEyMyIsInJvbGUiOiJVc2VyIiwibmFtZSI6IlBhcnNoYXYgU2hhaCJ9LCJpYXQiOjE1NzUxNzUzNDEsImV4cCI6MTU3NTIxMTM0MX0.PNVEnEA9w_9BGQi8QV9E0XXMTBW2MBo4_7nGLwjeYzg"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\" : \"task 1\",\n\t\"description\" : \"test task\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/task/delete/5de33d753993ed0a75681da9",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"delete",
+								"5de33d753993ed0a75681da9"
+							]
+						},
+						"description": "create"
+					},
+					"response": []
+				}
+			],
+			"description": "Task"
+		}
+	]
+}
